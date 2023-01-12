@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>毛玻璃遮罩效果</title>
+    <style>
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 400px;
+            /* radial-gradient创建一个图像,该图像从原点辐射的两种或多种颜色之间的渐进过度组成.形状可以是圆形或者椭圆形 */
+            background-image: radial-gradient(transparent 1px, #fff 1px);
+            background-size: 4px 4px;
+            /* backdrop-filte 为一个元素后面区域添加图形效果(如模糊或者颜色偏移),适用于元素背后的所有元素,必须使元素或者背景至少部分透明 */
+            backdrop-filter: saturate(50%) blur(4px);
+        }
+
+        .container {
+            padding-top: 300px;
+            height: 200vh;
+        }
+
+        .circle {
+            width: 100%;
+            height: 200px;
+            border-radius: 25px;
+            background: url('./img//s.jpg') no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header"></div>
+    <div class="container">
+        <div class="circle"></div>
+    </div>
+
+</body>
+
+</html>

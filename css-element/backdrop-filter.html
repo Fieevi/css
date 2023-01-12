@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>backdrop-filter</title>
+    <style>
+        /* html,
+        body {
+            height: 100%;
+            width: 100%;
+        }
+
+        body {
+            background-image: linear-gradient(rgb(219, 166, 166), rgb(0, 0, 172));
+        } */
+
+        /* 必须使元素或其背景至少部分透明 */
+        .container {
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 1000px;
+            height: 800px;
+            background: url(../img/scf.png) no-repeat;
+        }
+
+        .circle {
+            /* background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 5px;
+            line-height: 1;
+            backdrop-filter: saturate(80%);
+            padding: 20px 40px; */
+            text-align: center;
+            /* margin: 0 auto; */
+            max-width: 50%;
+            max-height: 50%;
+            height: 50px;
+            line-height: 50px;
+            padding: 0 20px;
+            /* blur 模糊 数值越大越模糊 */
+            /* backdrop-filter: blur(10px); */
+            /* brightness 单位只能为% 亮度 数值越大越亮 越小越黑  0% 相当于设置了 这个盒子所有颜色为black */
+            /* backdrop-filter: brightness(60%); */
+            /* contrast 单位只可以为% 反差  数值越大相当于没有 数值越小 相当于设置灰色滤镜  0% 为灰色 */
+            /* backdrop-filter: contrast(40%); */
+            /* grayscale 灰度 单位%  值越大,越偏向灰色*/
+            /* backdrop-filter: grayscale(30%); */
+            /* hue-rotate 单位为deg turn|圈数 rad|弧度 色调旋转滤镜 */
+            /* backdrop-filter: hue-rotate(130deg); */
+            /* invert 单位为% 颜色反转  数值越大 颜色反转越大*/
+            /* backdrop-filter: invert(70%); */
+            /* opacity 透明 单位% */
+            /* sepia 单位%  深褐色 数值越大 颜色越偏向深褐色  */
+            /* backdrop-filter: sepia(70%); */
+            /* saturate 单位% 饱和度 值越高饱和度越高,0%的值将完全不饱和 */
+            /* backdrop-filter: saturate(80%); */
+
+            /* 有部分属性需要配合其他属性一起使用,否则不会生效 */
+            /* 多重滤镜 */
+            backdrop-filter: blur(10px) saturate(80%) grayscale(30%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="circle">
+            Life doesn't have to be perfect， but to be wonderful
+        </div>
+    </div>
+</body>
+
+</html>
